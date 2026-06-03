@@ -1,0 +1,1 @@
+-force-include-file "AiAcquire.c";"d:\LocalProgram\LABCVI\AiAcquireDll\AiAcquire.c" -force-include-file "AiAcquire.h";"d:\LocalProgram\LABCVI\AiAcquireDll\AiAcquire.h" 

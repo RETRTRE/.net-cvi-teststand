@@ -1,0 +1,7 @@
+-inrc d:\LocalProgram\LABCVI\AiAcquireDll\cvibuild.AiAcquireDll\Debug64\resources.in.rc
+-outrc d:\LocalProgram\LABCVI\AiAcquireDll\cvibuild.AiAcquireDll\Debug64\resources.out.rc
+-inhdef d:\LocalProgram\LABCVI\AiAcquireDll\cvibuild.AiAcquireDll\Debug64\AiAcquire.h.hdefs
+-outdef d:\LocalProgram\LABCVI\AiAcquireDll\cvibuild.AiAcquireDll\Debug64\AiAcquireDll.dll.defs
+-indefprot d:\LocalProgram\LABCVI\AiAcquireDll\cvibuild.AiAcquireDll\Debug64\AiAcquire.obj.cvidefprots
+-dllName AiAcquireDll.dll
+-addNITypeInfo 

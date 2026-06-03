@@ -1,0 +1,8 @@
+{
+  "ProductModel": "UUT2",
+  "MeasuredValue": -14.954069643238624,
+  "MinLimit": -10,
+  "MaxLimit": 10,
+  "Passed": false,
+  "Message": "FAIL"
+}

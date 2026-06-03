@@ -1,0 +1,10 @@
+[TestAdd]
+Class="Function"
+Prototype="int TestAdd(int a, int b) __declspec(dllexport);"
+SourceLocation="d:\LocalProgram\LABCVI\AiAcquireDll\AiAcquire.c:4:20"
+
+[ReadScaledVoltage]
+Class="Function"
+Prototype="double ReadScaledVoltage(const char channelName[], double scale) __declspec(dllexport);"
+SourceLocation="d:\LocalProgram\LABCVI\AiAcquireDll\AiAcquire.c:9:23"
+

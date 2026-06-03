@@ -1,0 +1,8 @@
+{
+  "ProductModel": "UUT2",
+  "MeasuredValue": 5,
+  "MinLimit": -10,
+  "MaxLimit": 10,
+  "Passed": true,
+  "Message": "PASS"
+}

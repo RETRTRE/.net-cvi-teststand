@@ -1,0 +1,58 @@
+CCFLAGS = -g ;
+HDRS = 	"C:\\Users\\Public\\Documents\\National Instruments\\TestStand 2020 (32-bit)\\AdapterSupport\\CVI"
+	"C:\\Program Files (x86)\\National Instruments\\TestStand 2020\\API\\DLLInterfaces"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr\\TestStand\\API"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\instr"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2020\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2020\\include\\clang\\3.3"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\MSDTRedistributables\\SDKHeaderFiles\\8.1"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2020\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	;
+include Jamfile_instr ;
+LOCATE on "AiAcquire.c" = "d:\\LocalProgram\\LABCVI\\AiAcquireDll" ;
+LOCATE on "AiAcquire.h" = "d:\\LocalProgram\\LABCVI\\AiAcquireDll" ;
+Object "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.obj" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\AiAcquire.c" ;
+FILENUM on "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.obj" = 1 ;
+DEFPROTS on "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.obj" = "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.obj.cvidefprots" ;
+OUTFILE on "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.obj" = "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.obj.out" ;
+PrjObjects += "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.obj" ;
+Object "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.h.hdefs" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\AiAcquire.h" ;
+FILENUM on "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.h.hdefs" = 2 ;
+OUTFILE on "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.h.hdefs" = "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquire.h.hdefs.out" ;
+PreLinkInputs += "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.in.rc" ;
+PreLinkInputs += $(PrjObjects) $(InstrObjects) ;
+PreLinkOutputs += "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.out.rc" ;
+PreLinkOutputs += "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll.defs" ;
+PreLink $(PreLinkOutputs) : $(PreLinkInputs) ;
+Depends "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll.defs" ;
+Object "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.res" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.out.rc" ;
+Depends "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.res" : $(PreLinkOutputs) ;
+Depends "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.res" "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.out.rc" : $(PrjObjects) $(InstrObjects) ;
+Depends "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.res" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\manifest.xml" ;
+MainFromObjects "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll" : $(PrjObjects) $(InstrObjects) ;
+Depends "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\link_options.txt" ;
+Depends "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\dependencies.lnk.in" ;
+Depends "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll" : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\resources.res" ;
+Depends all : "d:\\LocalProgram\\LABCVI\\AiAcquireDll\\cvibuild.AiAcquireDll\\Debug\\AiAcquireDll.dll" ;
